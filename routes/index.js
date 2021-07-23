@@ -10,7 +10,7 @@ router.get('/email/template', (req, res, next) => {
     MailConfig.ViewOption(gmailTransport, hbs);
     let HelperOptions = {
         from: 'copstyle86@gmail.com',
-        to: 'copstyle@icloud.com',
+        to: 'copstyle@naver.com',
         subject: 'Hellow world!',
         template: 'test',
         context: {
@@ -33,13 +33,13 @@ router.get('/email/template', (req, res, next) => {
 router.get('/email/smtp/template', (req, res, next) => {
     MailConfig.ViewOption(smtpTransport, hbs);
     let HelperOptions = {
-        from: 'copstyle86@gmail.com',
-        to: 'copstyle@naver.com',
+        from: 'copstyle@naver.com',
+        to: 'copstyle@icloud.com',
         subject: 'Hellow world!',
         template: 'test',
         context: {
-            name: '나는',
-            email: '킴',
+            name: '나111는',
+            email: '킴111',
             address: '영민',
         },
     };
