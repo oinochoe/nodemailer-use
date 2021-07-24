@@ -13,6 +13,16 @@ module.exports.GmailTransport = nodemailer.createTransport({
     },
 });
 
+module.exports.SMTPTransport = nodemailer.createTransport({
+    service: environment.SMTP_SERVICE_NAME,
+    host: environment.SMTP_SERVICE_HOST,
+    port: environment.SMTP_SERVICE_PORT,
+    auth: {
+        user: environment.SMTP_USER_NAME,
+        pass: environment.SMTP_USER_PASSWORD,
+    },
+});
+
 module.exports.ViewOption = (transport, hbs) => {
     transport.use(
         'compile',
